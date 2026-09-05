@@ -462,7 +462,7 @@ class LessonRepositoryImpl : LessonRepository {
                 ),
                 GrammarRule(
                     title = "Separable Verb ('aufstehen')",
-                    explanation = "'aufstehen' একটি separable (পৃথকযোগ্য) verb। সাধারণ বাক্যে মূল Verb 'stehe' দ্বিতীয় স্থানে বসে এবং 'auf' অংশটি বাক্যের একেবারে শেষে চলে যায়:\n- Ich stehe um sieben Uhr auf.",
+                    explanation = "'aufstehen' একটি separable ( পৃথকযোগ্য) verb। সাধারণ বাক্যে মূল Verb 'stehe' দ্বিতীয় স্থানে বসে এবং 'auf' অংশটি বাক্যের একেবারে শেষে চলে যায়:\n- Ich stehe um sieben Uhr auf.",
                     examples = listOf(
                         "Ich stehe um sieben Uhr auf. (আমি সাতটায় উঠি।)",
                         "Wann stehst du auf? (তুমি কখন ওঠো?)"
@@ -741,6 +741,439 @@ class LessonRepositoryImpl : LessonRepository {
                     correctAnswer = "Ich möchte einen Kaffee.",
                     explanation = "'আমি একটি কফি চাই' এর জার্মান অনুবাদ হলো 'Ich möchte einen Kaffee.'",
                     type = ExerciseType.TRANSLATION
+                )
+            )
+        ),
+        Lesson(
+            id = "lesson_7",
+            title = "Lektion 7: কেনাকাটা (Einkaufen)",
+            description = "দোকান বা সুপারমার্কেটে কেনাকাটা করা, পণ্যের দাম জিজ্ঞাসা করা, দাম বলা এবং কেনাকাটা সম্পর্কিত সহজ কথোপকথন শিখুন।",
+            order = 7,
+            objectives = listOf(
+                "দোকানে পণ্যের দাম কীভাবে জিজ্ঞাসা করতে হয় তা শেখা (Wie viel kostet das? / Was kostet das?)।",
+                "পণ্যের দাম প্রকাশ করা (Das kostet ... Euro)।",
+                "পণ্য পছন্দ করা ও কেনার ইচ্ছা প্রকাশ করা (Ich möchte das kaufen / Ich nehme das)।",
+                "দাম সম্পর্কে মন্তব্য করা (teuer, billig, günstig)।",
+                "কেনাকাটা সংক্রান্ত দৈনন্দিন কথোপকথন বোঝা।"
+            ),
+            vocabulary = listOf(
+                VocabularyItem("einkaufen", "কেনাকাটা করা", "আইন-কাউ-ফেন", "Ich gehe einkaufen."),
+                VocabularyItem("kaufen", "কেনা", "কাউ-ফেন", "Ich möchte das kaufen."),
+                VocabularyItem("der Supermarkt", "সুপারমার্কেট", "দের জুপার-মার্কট", "Ich gehe in den Supermarkt."),
+                VocabularyItem("das Geschäft", "দোকান", "দাস গে-শেফট", "Das Geschäft ist offen."),
+                VocabularyItem("der Preis", "দাম / মূল্য", "দের প্রাইস", "Der Preis ist gut."),
+                VocabularyItem("kosten", "দাম হওয়া", "কস-তেন", "Was kostet das?"),
+                VocabularyItem("Euro", "ইউরো", "অয়-রো", "Das kostet fünf Euro."),
+                VocabularyItem("Cent", " সেন্ট", "সেন্ট", "Das kostet 50 Cent."),
+                VocabularyItem("teuer", "দামি / ব্যয়বহুল", "তয়-আর", "Das ist teuer."),
+                VocabularyItem("billig", "সস্তা", "বি-লিশ", "Das ist billig."),
+                VocabularyItem("günstig", "সাশ্রয়ী / কম দামের", "গ্যুন-স্টিশ", "Das ist günstig."),
+                VocabularyItem("nehmen", "নেওয়া", "নে-মেন", "Ich nehme das."),
+                VocabularyItem("brauchen", "প্রয়োজন হওয়া", "ব্রাউ-খেন", "Ich brauche Brot."),
+                VocabularyItem("die Tasche", "ব্যাগ / থলে", "দি তা-শে", "Ich brauche eine Tasche."),
+                VocabularyItem("das Geld", "টাকা / অর্থ", "দাস গেল্ট", "Ich habe Geld.")
+            ),
+            grammarRules = listOf(
+                GrammarRule(
+                    title = "দাম জিজ্ঞাসা করা ('Wie viel kostet ...?' / 'Was kostet ...?')",
+                    explanation = "কোনো জিনিসের দাম জানতে 'Wie viel kostet das?' বা 'Was kostet das?' ব্যবহার করা যায়। উভয় বাক্যের অর্থ 'এটার দাম কত?'।",
+                    examples = listOf(
+                        "Wie viel kostet das? (এটার দাম কত?)",
+                        "Was kostet das? (এটার দাম কত?)"
+                    )
+                ),
+                GrammarRule(
+                    title = "দাম বলা ('Das kostet ... Euro')",
+                    explanation = "কোনো জিনিসের দাম প্রকাশ করার জন্য 'Das kostet + [ইউরো/সংখ্যা]' ব্যবহার করা হয়।",
+                    examples = listOf(
+                        "Das kostet fünf Euro. (এটার দাম পাঁচ ইউরো।)",
+                        "Das kostet zehn Euro. (এটার দাম দশ ইউরো।)",
+                        "Der Preis ist zehn Euro. (দাম দশ ইউরো।)"
+                    )
+                ),
+                GrammarRule(
+                    title = "পণ্য পছন্দ করা ও কেনা ('Ich möchte ... kaufen' & 'Ich nehme ...')",
+                    explanation = "কোনো কিছু কিনতে চাইলে ভদ্রভাবে বলতে পারেন 'Ich möchte das kaufen' (আমি এটা কিনতে চাই) অথবা 'Ich nehme das' (আমি এটা নেব)।",
+                    examples = listOf(
+                        "Ich möchte das kaufen. (আমি এটা কিনতে চাই।)",
+                        "Ich nehme das. (আমি এটা নেব।)",
+                        "Ich möchte diesen Kaffee. (আমি এই কফিটি চাই।)"
+                    )
+                ),
+                GrammarRule(
+                    title = "দাম বিচার প্রকাশ করা ('teuer', 'billig', 'günstig')",
+                    explanation = "কোনো পণ্যের দাম সম্পর্কে মন্তব্য করতে:\n- teuer = দামি\n- billig = সস্তা\n- günstig = সাশ্রয়ী / কম দামের",
+                    examples = listOf(
+                        "Das ist teuer. (এটা দামি।)",
+                        "Das ist billig. (এটা সস্তা।)",
+                        "Das ist günstig. (এটা সাশ্রয়ী।)"
+                    )
+                ),
+                GrammarRule(
+                    title = "দোকানে মার্জিত ভাষা (Höflichkeit beim Einkaufen)",
+                    explanation = "দোকানদার ও ক্রেতার মধ্যে কেনাকাটার সময় কিছু সাধারণ মার্জিত অভিব্যক্তি:\n- Guten Tag (শুভ দিন)\n- Ich möchte ... (আমি ... চাই)\n- Bitte (দয়া করে / এই নিন)\n- Danke (ধন্যবাদ)",
+                    examples = listOf(
+                        "Kann ich Ihnen helfen? (আমি কি আপনাকে সাহায্য করতে পারি?)",
+                        "Danke! (ধন্যবাদ!)"
+                    )
+                )
+            ),
+            exampleSentences = listOf(
+                ExampleSentence("Wie viel kostet das?", "এটার দাম কত?", "ভি ফিল কস-তেত দাস"),
+                ExampleSentence("Was kostet das?", "এটার দাম কত?", "ভাস কস-তেত দাস"),
+                ExampleSentence("Das kostet fünf Euro.", "এটার দাম পাঁচ ইউরো।", "দাস কস-তেত ফিউনফ অয়-রো"),
+                ExampleSentence("Das kostet zehn Euro.", "এটার দাম দশ ইউরো।", "দাস কস-তেত ত্সেন অয়-রো"),
+                ExampleSentence("Der Preis ist zehn Euro.", "দাম দশ ইউরো।", "দের প্রাইস ইস্ট ত্সেন অয়-রো"),
+                ExampleSentence("Ich möchte das kaufen.", "আমি এটা কিনতে চাই।", "ইখ মেখ-টে দাস কাউ-ফেন"),
+                ExampleSentence("Ich nehme das.", "আমি এটা নেব।", "ইখ নে-মে দাস"),
+                ExampleSentence("Das ist teuer.", "এটা দামি।", "দাস ইস্ট তয়-আর"),
+                ExampleSentence("Das ist billig.", "এটা সস্তা।", "দাস ইস্ট বি-লিশ"),
+                ExampleSentence("Das ist günstig.", "এটা সাশ্রয়ী।", "দাস ইস্ট গ্যুন-স্টিশ")
+            ),
+            dialogues = listOf(
+                DialogueEntry("Verkäufer", "Guten Tag! Kann ich Ihnen helfen?", "শুভ দিন! আমি কি আপনাকে সাহায্য করতে পারি?"),
+                DialogueEntry("Kunde", "Ja, bitte. Was kostet das?", "জি, দয়া করে। এটার দাম কত?"),
+                DialogueEntry("Verkäufer", "Das kostet zehn Euro.", "এটার দাম দশ ইউরো।"),
+                DialogueEntry("Kunde", "Das ist teuer.", "এটা দামি।"),
+                DialogueEntry("Verkäufer", "Dieses kostet fünf Euro.", "এটির দাম পাঁচ ইউরো।"),
+                DialogueEntry("Kunde", "Okay. Ich nehme das.", "ঠিক আছে। আমি এটা নেব।"),
+                DialogueEntry("Verkäufer", "Bitte.", "এই নিন।"),
+                DialogueEntry("Kunde", "Danke!", "ধন্যবাদ!"),
+                DialogueEntry("Kunde", "Guten Tag! Was kostet die Tasche?", "শুভ দিন! ব্যাগটির দাম কত?"),
+                DialogueEntry("Verkäufer", "Die Tasche kostet zwanzig Euro.", "ব্যাগটির দাম বিশ ইউরো।"),
+                DialogueEntry("Kunde", "Oh, das ist teuer.", "ওহ, এটা দামি।"),
+                DialogueEntry("Verkäufer", "Dieses Produkt kostet zehn Euro.", "এই পণ্যটির দাম দশ ইউরো।"),
+                DialogueEntry("Kunde", "Gut. Ich nehme das.", "বেশ। আমি এটা নেব।"),
+                DialogueEntry("Verkäufer", "Bitte sehr!", "এই যে, নিন!"),
+                DialogueEntry("Kunde", "Danke schön!", "অনেক ধন্যবাদ!")
+            ),
+            exercises = listOf(
+                Exercise(
+                    id = "ex_7_1",
+                    question = "\"Wie viel kostet das?\" এর অর্থ কী?",
+                    options = listOf("এটা কী?", "এটার দাম কত?", "এটা কোথায়?", "এটা কার?"),
+                    correctAnswer = "এটার দাম কত?",
+                    explanation = "'Wie viel kostet das?' শব্দের অর্থ 'এটার দাম কত?'।",
+                    type = ExerciseType.MULTIPLE_CHOICE
+                ),
+                Exercise(
+                    id = "ex_7_2",
+                    question = "\"Das kostet fünf Euro.\" এর বাংলা অর্থ কী?",
+                    options = listOf("এটা পাঁচ ইউরো।", "এটার দাম পাঁচ ইউরো।", "আমি পাঁচ ইউরো চাই।", "আমার কাছে পাঁচ ইউরো আছে।"),
+                    correctAnswer = "এটার দাম পাঁচ ইউরো।",
+                    explanation = "'Das kostet fünf Euro.' অর্থ 'এটার দাম পাঁচ ইউরো।'",
+                    type = ExerciseType.MULTIPLE_CHOICE
+                ),
+                Exercise(
+                    id = "ex_7_3",
+                    question = "শূন্যস্থান পূরণ করুন: Das ___ zehn Euro.",
+                    options = listOf("kostet", "kauft", "nimmt", "sucht"),
+                    correctAnswer = "kostet",
+                    explanation = "দাম প্রকাশ করতে 'kostet' ক্রিয়াটি ব্যবহৃত হয়।",
+                    type = ExerciseType.MULTIPLE_CHOICE
+                ),
+                Exercise(
+                    id = "ex_7_4",
+                    question = "\"teuer\" এর অর্থ কী?",
+                    options = listOf("সস্তা", "দামি", "নতুন", "বড়"),
+                    correctAnswer = "দামি",
+                    explanation = "'teuer' শব্দের অর্থ দামি।",
+                    type = ExerciseType.MULTIPLE_CHOICE
+                ),
+                Exercise(
+                    id = "ex_7_5",
+                    question = "\"billig\" এর অর্থ কী?",
+                    options = listOf("দামি", "সস্তা", "সুন্দর", "ছোট"),
+                    correctAnswer = "সস্তা",
+                    explanation = "'billig' শব্দের অর্থ সস্তা।",
+                    type = ExerciseType.MULTIPLE_CHOICE
+                ),
+                Exercise(
+                    id = "ex_7_6",
+                    question = "জার্মানে অনুবাদ করুন: এটার দাম কত?",
+                    correctAnswer = "Wie viel kostet das?",
+                    explanation = "'এটার দাম কত?' এর জার্মান অনুবাদ হলো 'Wie viel kostet das?' (বা 'Was kostet das?')।",
+                    type = ExerciseType.TRANSLATION
+                ),
+                Exercise(
+                    id = "ex_7_7",
+                    question = "জার্মানে অনুবাদ করুন: আমি এটা নেব।",
+                    correctAnswer = "Ich nehme das.",
+                    explanation = "'আমি এটা নেব' এর জার্মান অনুবাদ হলো 'Ich nehme das.'",
+                    type = ExerciseType.TRANSLATION
+                ),
+                Exercise(
+                    id = "ex_7_8",
+                    question = "\"Ich möchte das kaufen.\" এর বাংলা অর্থ কী?",
+                    correctAnswer = "আমি এটা কিনতে চাই।",
+                    explanation = "'Ich möchte das kaufen.' অর্থ 'আমি এটা কিনতে চাই।'",
+                    type = ExerciseType.TRANSLATION
+                ),
+                Exercise(
+                    id = "ex_7_9",
+                    question = "জার্মান বাক্যে বলা হয়েছে: \"Das kostet zwanzig Euro.\" এটার দাম কত?",
+                    options = listOf("€5", "€10", "€20", "€50"),
+                    correctAnswer = "€20",
+                    explanation = "'zwanzig Euro' মানে ২০ ইউরো (€20)।",
+                    type = ExerciseType.MULTIPLE_CHOICE
+                ),
+                Exercise(
+                    id = "ex_7_10",
+                    question = "কথোপকথনটি পড়ুন:\nVerkäufer: Das kostet fünfzehn Euro.\n\nপ্রশ্ন: Wie viel kostet das?",
+                    options = listOf("Fünf Euro", "Zehn Euro", "Fünfzehn Euro", "Zwanzig Euro"),
+                    correctAnswer = "Fünfzehn Euro",
+                    explanation = "বিক্রেতা বলেছেন 'Das kostet fünfzehn Euro', অর্থাৎ ১৫ ইউরো।",
+                    type = ExerciseType.MULTIPLE_CHOICE
+                ),
+                Exercise(
+                    id = "ex_7_11",
+                    question = "\"günstig\" এর অর্থ কী?",
+                    options = listOf("দামি", "সাশ্রয়ী", "পুরাতন", "খারাপ"),
+                    correctAnswer = "সাশ্রয়ী",
+                    explanation = "'günstig' শব্দের অর্থ সাশ্রয়ী বা কম দামের।",
+                    type = ExerciseType.MULTIPLE_CHOICE
+                ),
+                Exercise(
+                    id = "ex_7_12",
+                    question = "শূন্যস্থান পূরণ করুন: Ich möchte das ___.",
+                    options = listOf("kaufen", "kostet", "ist", "preis"),
+                    correctAnswer = "kaufen",
+                    explanation = "'Ich möchte das kaufen' বাক্যটির অর্থ 'আমি এটা কিনতে চাই'।",
+                    type = ExerciseType.MULTIPLE_CHOICE
+                )
+            )
+        ),
+        Lesson(
+            id = "lesson_8",
+            title = "Lektion 8: শহরে চলাফেরা (Unterwegs in der Stadt)",
+            description = "শহরে চলাফেরা করা, বিভিন্ন স্থানের অবস্থান জিজ্ঞাসা করা, দিকনির্দেশনা বোঝা এবং সাধারণ গণপরিবহন সম্পর্কিত জার্মান ভাষা শিখুন।",
+            order = 8,
+            objectives = listOf(
+                "কোথায় একটি স্থান আছে তা জিজ্ঞাসা করা (Wo ist ...?)।",
+                "কোনো স্থানের অবস্থান প্রকাশ করা (hier, dort, neben, gegenüber)।",
+                "সাধারণ দিকনির্দেশনা বোঝা (geradeaus, links, rechts)।",
+                "বাম, ডান এবং সোজা যাওয়ার নির্দেশ বোঝা ও ব্যবহার করা।",
+                "শহরের গুরুত্বপূর্ণ স্থানসমূহ চেনা (Bahnhof, Bank, Apotheke, Supermarkt ইত্যাদি)।",
+                "গণপরিবহন সম্পর্কিত মূল শব্দমালা জানা (Bus, Zug, Bahn, Taxi, Fahrrad)।",
+                "বাস, ট্রেন বা ট্রাম সম্পর্কে জিজ্ঞাসা করা।",
+                "দিকনির্দেশনা সংক্রান্ত বাস্তব সংক্ষিপ্ত কথোপকথন বোঝা।",
+                "অবস্থান ও পরিবহন সম্পর্কিত সহজ A1 বাক্য তৈরি করা।"
+            ),
+            vocabulary = listOf(
+                VocabularyItem("die Stadt", "শহর", "দি স্টাট", "Berlin ist eine große Stadt."),
+                VocabularyItem("der Bahnhof", "রেলস্টেশন", "দের বান-হোফ", "Wo ist der Bahnhof?"),
+                VocabularyItem("die Bushaltestelle", "বাসস্টপ", "দি বুশ-হাল-টে-স্টেল-লে", "Die Bushaltestelle ist dort."),
+                VocabularyItem("der Flughafen", "বিমানবন্দর", "দের ফ্লুগ-হা-ফেন", "Der Flughafen ist groß."),
+                VocabularyItem("die Bank", "ব্যাংক", "দি ব্যাংক", "Die Bank ist geöffnet."),
+                VocabularyItem("die Post", "ডাকঘর", "দি পোস্ট", "Wo ist die Post?"),
+                VocabularyItem("der Supermarkt", "সুপারমার্কেট", "দের জুপার-মার্কট", "Der Supermarkt ist nah."),
+                VocabularyItem("das Geschäft", "দোকান", "দাস গে-শেফট", "Das Geschäft ist hier."),
+                VocabularyItem("die Apotheke", "ফার্মেসি", "দি আ-পো-তে-কে", "Die Apotheke ist neben der Bank."),
+                VocabularyItem("das Hotel", "হোটেল", "দাস হো-টেল", "Das Hotel ist dort."),
+                VocabularyItem("das Restaurant", "রেস্টুরেন্ট", "দাস রেস-তো-রং", "Das Restaurant ist gut."),
+                VocabularyItem("das Café", "ক্যাফে", "দাস কা-ফে", "Das Café ist gemütlich."),
+                VocabularyItem("die Schule", "স্কুল", "দি শু-লে", "Die Schule ist groß."),
+                VocabularyItem("der Park", "পার্ক", "দের পার্ক", "Der Park ist schön."),
+                VocabularyItem("das Krankenhaus", "হাসপাতাল", "দাস ক্রাংকেন-হাউস", "Das Krankenhaus ist weit."),
+                VocabularyItem("die Straße", "রাস্তা", "দি শ্ট্রা-সে", "Die Straße ist lang."),
+                VocabularyItem("der Platz", "চত্বর / স্কোয়ার", "দের প্লাৎস", "Der Platz ist schön."),
+                VocabularyItem("geradeaus", "সোজা", "গে-রা-দে-আউস", "Gehen Sie geradeaus."),
+                VocabularyItem("links", "বামে", "লিংকস", "Gehen Sie nach links."),
+                VocabularyItem("rechts", "ডানে", "রেখটস", "Gehen Sie nach rechts."),
+                VocabularyItem("hier", "এখানে", "হিয়ার", "Die Bank ist hier."),
+                VocabularyItem("dort", "সেখানে", "ডর্ট", "Der Bahnhof ist dort."),
+                VocabularyItem("vorne", "সামনে", "ফর-নে", "Das Taxi ist vorne."),
+                VocabularyItem("hinten", "পেছনে", "হিন-তেন", "Der Bus ist hinten."),
+                VocabularyItem("neben", "পাশে", "নে-বেন", "Das Café ist neben dem Hotel."),
+                VocabularyItem("gegenüber", "বিপরীতে", "গে-গেন-উই-বার", "Die Apotheke ist gegenüber der Bank."),
+                VocabularyItem("der Bus", "বাস", "দের বুস", "Ich fahre mit dem Bus."),
+                VocabularyItem("die Bahn", "ট্রেন/রেল", "দি বান", "Die Bahn kommt pünktlich."),
+                VocabularyItem("der Zug", "ট্রেন", "দের ত্সুগ", "Ich fahre mit dem Zug."),
+                VocabularyItem("die Straßenbahn", "ট্রাম", "দি শ্ট্রা-সেন-বান", "Die Straßenbahn kommt."),
+                VocabularyItem("das Taxi", "ট্যাক্সি", "দাস ট্যাক্সি", "Ich fahre mit dem Taxi."),
+                VocabularyItem("das Auto", "গাড়ি", "দাস আউ-টো", "Das Auto ist neu."),
+                VocabularyItem("das Fahrrad", "সাইকেল", "দাস ফার-রাট", "Ich fahre Fahrrad."),
+                VocabularyItem("zu Fuß", "হেঁটে", "ত্সু ফুস", "Ich gehe zu Fuß."),
+                VocabularyItem("fahren", "যাতায়াত করা / যাওয়া", "ফা-রেন", "Ich fahre mit dem Bus."),
+                VocabularyItem("gehen", "যাওয়া / হাঁটা", "গে-এন", "Gehen Sie geradeaus."),
+                VocabularyItem("kommen", "আসা", "কো-মেন", "Wie komme ich zum Bahnhof?"),
+                VocabularyItem("nehmen", "নেওয়া / ব্যবহার করা", "নে-মেন", "Ich nehme ein Taxi.")
+            ),
+            grammarRules = listOf(
+                GrammarRule(
+                    title = "স্থান জিজ্ঞাসা করা ('Wo ist ...?')",
+                    explanation = "কোনো স্থান কোথায় অবস্থিত তা জানতে 'Wo ist ...?' প্রশ্নটি ব্যবহার করা হয়।\n- Wo ist der Bahnhof? (রেলস্টেশন কোথায়?)\n- Wo ist die Bank? (ব্যাংক কোথায়?)\n- Wo ist das Hotel? (হোটেল কোথায়?)",
+                    examples = listOf(
+                        "Wo ist der Bahnhof? (রেলস্টেশন কোথায়?)",
+                        "Wo ist die Bank? (ব্যাংক কোথায়?)",
+                        "Wo ist die Apotheke? (ফার্মেসি কোথায়?)",
+                        "Wo ist das Hotel? (হোটেল কোথায়?)"
+                    )
+                ),
+                GrammarRule(
+                    title = "গন্তব্যে পৌঁছানোর উপায় ('Wie komme ich ...?')",
+                    explanation = "কোনো নির্দিষ্ট স্থানে কীভাবে পৌঁছাবেন তা জানতে নির্দিষ্ট অভিব্যক্তি 'Wie komme ich zum/zur ...?' ব্যবহার করা হয়।\n- Wie komme ich zum Bahnhof? (আমি কীভাবে রেলস্টেশনে যাব?)\n- Wie komme ich zur Bank? (আমি কীভাবে ব্যাংকে যাব?)",
+                    examples = listOf(
+                        "Wie komme ich zum Bahnhof? (আমি কীভাবে রেলস্টেশনে যাব?)",
+                        "Wie komme ich zur Bank? (আমি কীভাবে ব্যাংকে যাব?)"
+                    )
+                ),
+                GrammarRule(
+                    title = "অবস্থান প্রকাশ ('hier', 'dort', 'neben', 'gegenüber')",
+                    explanation = "কোনো স্থানের অবস্থান নির্দেশ করার জন্য নিম্নোক্ত শব্দসমূহ ব্যবহার করা হয়:\n- hier (এখানে)\n- dort (সেখানে)\n- neben (পাশে)\n- gegenüber (বিপরীতে)",
+                    examples = listOf(
+                        "Der Bahnhof ist dort. (রেলস্টেশন সেখানে।)",
+                        "Die Bank ist hier. (ব্যাংক এখানে।)",
+                        "Das Café ist neben dem Hotel. (ক্যাফেটি হোটেলের পাশে।)",
+                        "Die Apotheke ist gegenüber der Bank. (ফার্মেসিটি ব্যাংকের বিপরীতে।)"
+                    )
+                ),
+                GrammarRule(
+                    title = "দিকনির্দেশনা নির্দেশ করা ('Gehen Sie ...')",
+                    explanation = "ভদ্রভাবে কাউকেও দিকনির্দেশ দিতে 'Gehen Sie ...' দিয়ে বাক্য গঠন করা হয়:\n- Gehen Sie geradeaus. (সোজা যান।)\n- Gehen Sie nach links. (বামে যান।)\n- Gehen Sie nach rechts. (ডানে যান।)",
+                    examples = listOf(
+                        "Gehen Sie geradeaus. (সোজা যান।)",
+                        "Gehen Sie nach links. (বামে যান।)",
+                        "Gehen Sie nach rechts. (ডানে যান।)"
+                    )
+                ),
+                GrammarRule(
+                    title = "পরিবহন মাধ্যম প্রকাশ ('mit dem/der' & 'zu Fuß')",
+                    explanation = "কোনো যানবহন ব্যবহার করে কোথাও যাওয়া বোঝাতে 'mit dem/der [যানবাহন]' এবং হেঁটে যাওয়া বোঝাতে 'zu Fuß' ব্যবহৃত হয়:\n- Ich fahre mit dem Bus. (আমি বাসে যাই।)\n- Ich fahre mit dem Zug. (আমি ট্রেনে যাই।)\n- Ich fahre mit dem Taxi. (আমি ট্যাক্সিতে যাই।)\n- Ich gehe zu Fuß. (আমি হেঁটে যাই।)",
+                    examples = listOf(
+                        "Ich fahre mit dem Bus. (আমি বাসে যাই।)",
+                        "Ich fahre mit dem Zug. (আমি ট্রেনে যাই।)",
+                        "Ich fahre mit dem Taxi. (আমি ট্যাক্সিতে যাই।)",
+                        "Ich gehe zu Fuß. (আমি হেঁটে যাই।)"
+                    )
+                )
+            ),
+            exampleSentences = listOf(
+                ExampleSentence("Wo ist der Bahnhof?", "রেলস্টেশন কোথায়?", "ভো ইস্ট দের বান-হোফ"),
+                ExampleSentence("Wo ist die Bank?", "ব্যাংক কোথায়?", "ভো ইস্ট দি ব্যাংক"),
+                ExampleSentence("Wie komme ich zum Bahnhof?", "আমি কীভাবে রেলস্টেশনে যাব?", "ভি কো-মে ইখ ত্সুম বান-হোফ"),
+                ExampleSentence("Gehen Sie geradeaus.", "সোজা যান।", "গে-এন জি গে-রা-দে-আউস"),
+                ExampleSentence("Gehen Sie nach links.", "বামে যান।", "গে-এন জি নাখ লিংকস"),
+                ExampleSentence("Gehen Sie nach rechts.", "ডানে যান।", "গে-এন জি নাখ রেখটস"),
+                ExampleSentence("Der Bahnhof ist dort.", "রেলস্টেশন সেখানে।", "দের বান-হোফ ইস্ট ডর্ট"),
+                ExampleSentence("Die Bank ist hier.", "ব্যাংক এখানে।", "দি ব্যাংক ইস্ট হিয়ার"),
+                ExampleSentence("Das Café ist neben dem Hotel.", "ক্যাফেটি হোটেলের পাশে।", "দাস কা-ফে ইস্ট নে-বেন দেম হো-টেল"),
+                ExampleSentence("Die Apotheke ist gegenüber der Bank.", "ফার্মেসিটি ব্যাংকের বিপরীতে।", "দি আ-পো-তে-কে ইস্ট গে-গেন-উই-বার দের ব্যাংক"),
+                ExampleSentence("Ich fahre mit dem Bus.", "আমি বাসে যাই।", "ইখ ফা-রে মিট দেম বুস"),
+                ExampleSentence("Ich gehe zu Fuß.", "আমি হেঁটে যাই।", "ইখ গে-হে ত্সু ফুস")
+            ),
+            dialogues = listOf(
+                DialogueEntry("A", "Entschuldigung, wo ist der Bahnhof?", "ক্ষমা করবেন, রেলস্টেশন কোথায়?"),
+                DialogueEntry("B", "Der Bahnhof ist dort.", "রেলস্টেশন সেখানে।"),
+                DialogueEntry("A", "Wie komme ich zum Bahnhof?", "আমি কীভাবে রেলস্টেশনে যাব?"),
+                DialogueEntry("B", "Gehen Sie geradeaus und dann nach rechts.", "সোজা যান এবং তারপর ডানে যান।"),
+                DialogueEntry("A", "Danke!", "ধন্যবাদ!"),
+                DialogueEntry("B", "Bitte!", "স্বাগতম!"),
+                DialogueEntry("A", "Entschuldigung, wo ist die Apotheke?", "ক্ষমা করবেন, ফার্মেসি কোথায়?"),
+                DialogueEntry("B", "Die Apotheke ist neben der Bank.", "ফার্মেসিটি ব্যাংকের পাশে।"),
+                DialogueEntry("A", "Ist die Bank dort?", "ব্যাংকটি কি সেখানে?"),
+                DialogueEntry("B", "Ja, genau.", "হ্যাঁ, একদম ঠিক।"),
+                DialogueEntry("A", "Danke schön!", "অনেক ধন্যবাদ!"),
+                DialogueEntry("B", "Bitte schön!", "আপনাকেও ধন্যবাদ!"),
+                DialogueEntry("A", "Wie komme ich zum Bahnhof?", "আমি কীভাবে রেলস্টেশনে যাব?"),
+                DialogueEntry("B", "Sie können mit dem Bus fahren.", "আপনি বাসে যেতে পারেন।"),
+                DialogueEntry("A", "Wo ist die Bushaltestelle?", "বাসস্টপ কোথায়?"),
+                DialogueEntry("B", "Die Bushaltestelle ist dort.", "বাসস্টপ সেখানে।"),
+                DialogueEntry("A", "Danke!", "ধন্যবাদ!")
+            ),
+            exercises = listOf(
+                Exercise(
+                    id = "ex_8_1",
+                    question = "\"Wo ist der Bahnhof?\" এর সঠিক বাংলা অর্থ কোনটি?",
+                    options = listOf("রেলস্টেশন কোথায়?", "বাসস্টপ কোথায়?", "হোটেল কোথায়?", "ব্যাংক কোথায়?"),
+                    correctAnswer = "রেলস্টেশন কোথায়?",
+                    explanation = "'der Bahnhof' মানে রেলস্টেশন, তাই সঠিক অর্থ 'রেলস্টেশন কোথায়?'।",
+                    type = ExerciseType.MULTIPLE_CHOICE
+                ),
+                Exercise(
+                    id = "ex_8_2",
+                    question = "শূন্যস্থান পূরণ করুন: Gehen Sie ________.",
+                    options = listOf("geradeaus", "Bahnhof", "Wasser", "Apfel"),
+                    correctAnswer = "geradeaus",
+                    explanation = "'Gehen Sie geradeaus' বাক্যটির অর্থ 'সোজা যান'।",
+                    type = ExerciseType.FILL_IN_BLANK
+                ),
+                Exercise(
+                    id = "ex_8_3",
+                    question = "\"rechts\" শব্দের সঠিক বাংলা অর্থ কোনটি?",
+                    options = listOf("বামে", "ডানে", "সোজা", "পেছনে"),
+                    correctAnswer = "ডানে",
+                    explanation = "'rechts' মানে ডানে।",
+                    type = ExerciseType.MULTIPLE_CHOICE
+                ),
+                Exercise(
+                    id = "ex_8_4",
+                    question = "জার্মানে অনুবাদ করুন: আমি বাসে যাই।",
+                    correctAnswer = "Ich fahre mit dem Bus.",
+                    explanation = "'আমি বাসে যাই' এর জার্মান অনুবাদ হলো 'Ich fahre mit dem Bus.'",
+                    type = ExerciseType.TRANSLATION
+                ),
+                Exercise(
+                    id = "ex_8_5",
+                    question = "You are in Berlin and want to find the train station.\n\"Entschuldigung, ______ ist der Bahnhof?\"",
+                    options = listOf("wo", "wie", "was", "wer"),
+                    correctAnswer = "wo",
+                    explanation = "কোনো স্থানের অবস্থান জানতে 'wo' (কোথায়) ব্যবহৃত হয়।",
+                    type = ExerciseType.MULTIPLE_CHOICE
+                ),
+                Exercise(
+                    id = "ex_8_6",
+                    question = "শূন্যস্থান পূরণ করুন: Gehen Sie ________ und dann nach links.",
+                    options = listOf("geradeaus", "Tee", "Brot", "Sohn"),
+                    correctAnswer = "geradeaus",
+                    explanation = "দিকনির্দেশনায় 'geradeaus' (সোজা) ব্যবহৃত হয়।",
+                    type = ExerciseType.FILL_IN_BLANK
+                ),
+                Exercise(
+                    id = "ex_8_7",
+                    question = "জার্মানে অনুবাদ করুন: ফার্মেসিটি ব্যাংকের পাশে।",
+                    correctAnswer = "Die Apotheke ist neben der Bank.",
+                    explanation = "'ফার্মেসিটি ব্যাংকের পাশে' এর জার্মান অনুবাদ হলো 'Die Apotheke ist neben der Bank.'",
+                    type = ExerciseType.TRANSLATION
+                ),
+                Exercise(
+                    id = "ex_8_8",
+                    question = "\"links\" শব্দের অর্থ কী?",
+                    options = listOf("বামে", "ডানে", "সামনে", "পেছনে"),
+                    correctAnswer = "বামে",
+                    explanation = "'links' শব্দের অর্থ 'বামে'।",
+                    type = ExerciseType.MULTIPLE_CHOICE
+                ),
+                Exercise(
+                    id = "ex_8_9",
+                    question = "\"die Bushaltestelle\" শব্দের বাংলা অর্থ কী?",
+                    options = listOf("রেলস্টেশন", "বাসস্টপ", "বিমানবন্দর", "চত্বর"),
+                    correctAnswer = "বাসস্টপ",
+                    explanation = "'die Bushaltestelle' শব্দের অর্থ 'বাসস্টপ'।",
+                    type = ExerciseType.MULTIPLE_CHOICE
+                ),
+                Exercise(
+                    id = "ex_8_10",
+                    question = "জার্মানে অনুবাদ করুন: আমি হেঁটে যাই।",
+                    correctAnswer = "Ich gehe zu Fuß.",
+                    explanation = "'আমি হেঁটে যাই' এর জার্মান অনুবাদ হলো 'Ich gehe zu Fuß.'",
+                    type = ExerciseType.TRANSLATION
+                ),
+                Exercise(
+                    id = "ex_8_11",
+                    question = "\"Wie komme ich zum Bahnhof?\" এর অর্থ কী?",
+                    options = listOf("আমি কীভাবে রেলস্টেশনে যাব?", "রেলস্টেশন কোথায়?", "বাসটি কখন আসবে?", "হোটেলটি কোথায়?"),
+                    correctAnswer = "আমি কীভাবে রেলস্টেশনে যাব?",
+                    explanation = "'Wie komme ich zum Bahnhof?' এর বাংলা অর্থ 'আমি কীভাবে রেলস্টেশনে যাব?'।",
+                    type = ExerciseType.MULTIPLE_CHOICE
+                ),
+                Exercise(
+                    id = "ex_8_12",
+                    question = "\"Gehen Sie nach rechts.\" এর অর্থ কী?",
+                    options = listOf("বামে যান।", "ডানে যান।", "সোজা যান।", "থামুন।"),
+                    correctAnswer = "ডানে যান।",
+                    explanation = "'Gehen Sie nach rechts' বাক্যটির অর্থ 'ডানে যান।'",
+                    type = ExerciseType.MULTIPLE_CHOICE
                 )
             )
         )
